@@ -1,22 +1,48 @@
 import java.io.*;
-public class Employee { int age;
-String name, designation; double salary;
-// Constructor
-public Employee(String name) { this.name = name;
+
+class Employee {
+    int age;
+    String name, designation;
+    double salary;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public void empAge(int empAge) {
+        this.age = empAge;
+    }
+
+    public void empDesignation(String empDesig) {
+        this.designation = empDesig;
+    }
+
+    public void empSalary(double sal) {
+        this.salary = sal;
+    }
+
+    public void printEmployee() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Designation: " + designation);
+        System.out.println("Salary: " + salary);
+        System.out.println("-----------------------------");
+    }
 }
-// Method to set employee age public void empAge(int empAge) { age = empAge;
+
+public class EmployeeTest {
+    public static void main(String args[]) {
+        Employee empOne = new Employee("Dora");
+        Employee empTwo = new Employee("Vani");
+
+        empOne.empAge(30);
+        empOne.empDesignation("Software Developer");
+        empOne.empSalary(90000);
+        empOne.printEmployee();
+
+        empTwo.empAge(29);
+        empTwo.empDesignation("Software Engineer");
+        empTwo.empSalary(70000);
+        empTwo.printEmployee();
+    }
 }
-// Method to set employee designation public void empDesignation(String empDesig) { designation = empDesig;
-}
-// Method to set employee salary public void empSalary(double sal) { salary = sal;
-}
-// Method to display employee details public void printEmployee() {
-System.out.println("Name: " + name); System.out.println("Age: " + age);
-System.out.println("Designation: " + designation); System.out.println("Salary: " + salary);
-} } public class EmployeeTest {
-public static void main(String args[]) { Employee empOne = new Employee("Dora"); Employee empTwo = new Employee("Vani");
-empOne.empAge(30);
-empOne.empDesignation("Software Developer"); empOne.empSalary(90000); empOne.printEmployee();
-empTwo.empAge(29);
-empTwo.empDesignation("Software Engineer"); empTwo.empSalary(70000); empTwo.printEmployee();
-} }
