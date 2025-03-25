@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>jQuery Effects</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <style>
-        div {
-            border: 5px solid lightgrey;
-            padding: 5px;
-            background-color: pink;
+<title>jQuery Effects</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <style>
+      div {
+          border: 5px solid lightgrey;
+         padding: 5px;
+          background-color: pink;
         }
         
-        .button {
+     .button {
     border: none;
     color: white;
     padding: 15px 32px;
@@ -26,44 +26,44 @@
  .button2 {background-color: #008CBA;}
 </style>
 <script>
-        $(function() {
-            $("#hide").click(function() {
-                $("#p1").hide(1000);
+    $(function() {
+      $("#hide").click(function() {
+        $("#p1").hide(1000);
+        });
+
+        $("#show").click(function() {
+          $("#p1").show(1000);
             });
 
-            $("#show").click(function() {
-                $("#p1").show(1000);
+         $("#toggle").click(function() {
+           $("#p1").toggle(1000);
             });
 
-            $("#toggle").click(function() {
-                $("#p1").toggle(1000);
+          $("#fadeout").click(function() {
+            $("#p2").fadeOut();
             });
 
-            $("#fadeout").click(function() {
-                $("#p2").fadeOut();
+          $("#fadein").click(function() {
+             $("#p2").fadeIn(1000);
             });
 
-            $("#fadein").click(function() {
-                $("#p2").fadeIn(1000);
+          $("#fadetol").click(function() {
+             $("#p2").fadeTo("slow", 0.2);
             });
 
-            $("#fadetol").click(function() {
-                $("#p2").fadeTo("slow", 0.2);
+          $("#fadetoh").click(function() {
+              $("#p2").fadeTo("slow", 1);
             });
 
-            $("#fadetoh").click(function() {
-                $("#p2").fadeTo("slow", 1);
+         $("#slidedown").click(function() {
+            $("#p3").slideDown();
             });
 
-            $("#slidedown").click(function() {
-                $("#p3").slideDown();
-            });
-
-            $("#slideup").click(function() {
-                $("#p3").slideUp();
-    });
- $("#slidetoggle").click(function() {
-  $("#p3").slideToggle();
+         $("#slideup").click(function() {
+              $("#p3").slideUp();
+             });
+         $("#slidetoggle").click(function() {
+              $("#p3").slideToggle();
 });
 });
 </script>
