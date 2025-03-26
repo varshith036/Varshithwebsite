@@ -1,0 +1,42 @@
+import java.awt.*;
+import java.awt.event.*;
+public class MouseEventExample extends Frame implements MouseListener,MouseMotionListener{
+private String message="";
+public MouseEventExample(){
+setSize(400,300);
+setTitle("Mouse Event Example");
+setVisible(true);
+addMouseListener(this);
+addMouseMotionListener(this);
+addWindowListener(new WindowAdapter(){
+public void windowClosing(WindowEvent e){
+System.exit(0);
+}});
+}
+public void mouseClicked(MouseEvent e){
+message="Mouse clicked at ("+e.getX()+", "+e.getY()+")";
+repaint();
+}
+public void mousePressed(MouseEvent e){}
+public void mouseReleased(MouseEvent e){}
+public void mouseEntered(MouseEvent e){}
+public void mouseExited(MouseEvent e){}
+public void mouseDragged(MouseEvent e){
+message="Mouse dragged at ("+e.getX()+", "+e.getY()+")";
+repaint();
+}
+public void mouseMoved(MouseEvent e){
+message="Mouse moved at ("+e.getX()+","+e.getY()+")";
+repaint();
+}
+public void paint(Graphics g){
+super.paint(g);
+g.drawString(message,20,50);
+}
+public static void main(String[] args){
+new MouseEventExample();
+}
+}
+
+
+MouseEventExample.java
