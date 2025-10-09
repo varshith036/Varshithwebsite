@@ -1,0 +1,28 @@
+import statistics
+def calculate_average(numbers):
+    """Calculate the average of the numbers."""
+    if not numbers:
+        return 0
+    return sum(numbers)/len(numbers)
+def main():
+    """Main function to calculate aarious statistical measures."""
+    print("Enter numbers separated by space:")
+    try:
+        numbers=list(map(float,input().split()))
+        if not numbers:
+            print("The list is empty.Plaease provide valid numbers.")
+            return
+        average=calculate_average(numbers)
+        mean=statistics.mean(numbers)
+        median=statistics.median(numbers)
+        std_dev=statistics.stdev(numbers)if len(numbers)>1 else 0
+        print(f"\nNumbers:{numbers}")
+        print(f"Average:{average}")
+        print(f"Mean:{mean}")
+        print(f"Median:{median}")
+        print(f"Standard Deviation:{std_dev}")
+    except ValueError:
+        print("Invalid input. Please enter only numbers.")
+if __name__=="__main__":
+    main()
+            
