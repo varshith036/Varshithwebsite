@@ -1,0 +1,23 @@
+      areafunctions.py
+def rectangle(w, h):
+    area = w * h
+    return area
+def circle(r):
+    import math
+    area = math.pi * math.pow(r, 2)
+    return area
+    
+    mathfunctions.py
+def sum(x, y):
+    return x + y
+def average(x, y):
+    return (x + y) / 2
+def power(x, y):
+    return x ** y
+    
+        main.py
+from mypackage.areafunctions import rectangle
+print("Area:", rectangle(10, 20))
+
+from mypackage.mathfunctions import average
+print("Average:", average(10, 20))
