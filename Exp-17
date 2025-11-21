@@ -1,0 +1,29 @@
+class ComplexNumber:
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def __add__(self, other):
+        real_part = self.real + other.real
+        imaginary_part = self.imaginary + other.imaginary
+        return ComplexNumber(real_part, imaginary_part)
+
+    def __str__(self):
+        return f"{self.real} + {self.imaginary}i"
+
+def main():
+    print("Enter the first complex number:")
+    real1 = float(input("Real part: "))
+    imaginary1 = float(input("Imaginary part: "))
+
+    print("Enter the second complex number:")
+    real2 = float(input("Real part: "))
+    imaginary2 = float(input("Imaginary part: "))
+
+    complex1 = ComplexNumber(real1, imaginary1)
+    complex2 = ComplexNumber(real2, imaginary2)
+
+    result = complex1 + complex2
+    print(f"\nThe sum of the complex numbers {complex1} and {complex2} is: {result}")
+
+main()
